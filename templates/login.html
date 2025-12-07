@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login — WakeLink{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>🔑 Welcome Back</h2>
+    <p class="form-subtitle">Sign in to your WakeLink account</p>
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+    <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="Username" required autocomplete="username">
+        <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
+        <button type="submit">Sign In</button>
+    </form>
+    <div class="nav">
+        <a href="/register">Create account</a> · <a href="/">← Home</a>
+    </div>
+</div>
+{% endblock %}

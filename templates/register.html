@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Register — WakeLink{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>📝 Create Account</h2>
+    <p class="form-subtitle">Start controlling your devices today</p>
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+    <form method="POST" action="/register">
+        <input type="text" name="username" placeholder="Username" required autocomplete="username">
+        <input type="password" name="password" placeholder="Password" required autocomplete="new-password">
+        <button type="submit">Create Account</button>
+    </form>
+    <div class="nav">
+        <a href="/login">Already have an account?</a> · <a href="/">← Home</a>
+    </div>
+</div>
+{% endblock %}
