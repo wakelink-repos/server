@@ -6,7 +6,6 @@ pydantic-settings
 python-multipart
 jinja2
 gunicorn
-uvloop
 httptools
 websockets
 python-jose[cryptography]
